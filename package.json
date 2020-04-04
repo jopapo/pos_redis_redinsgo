@@ -1,0 +1,25 @@
+{
+  "name": "pos_redis_redinsgo",
+  "version": "1.0.0",
+  "description": "Exercício 1 - Pós Data Science - REDIS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jopapo/pos_redis_redinsgo.git"
+  },
+  "author": "João Paulo Poffo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jopapo/pos_redis_redinsgo/issues"
+  },
+  "homepage": "https://github.com/jopapo/pos_redis_redinsgo#readme",
+  "bin": {
+    "app": "./bin/index.js"
+  },
+  "dependencies": {
+    "redis": "^3.0.2"
+  }
+}

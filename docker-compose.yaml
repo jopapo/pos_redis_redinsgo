@@ -1,0 +1,14 @@
+---
+version: "3.5"
+
+services:
+  redis-server:
+    image: "redis:latest"
+    ports: 
+    - 6379:6379
+
+  redis-cli:
+    image: "redis:latest"
+    links:
+    - redis-server
+    command: redis-cli -h redis-server
