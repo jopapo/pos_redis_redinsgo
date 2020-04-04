@@ -36,11 +36,15 @@ function check_user_score(card_num, user_key) {
                     console.log(user_key + ' now with ' + points + ' points')
                     if (points >= 15) {
                         client.hget(user_key, 'name', function(err, name) {
-                            console.log('Campeão!!!! ' + name + ' (' + user_key + ')')
+                            console.log(name + ' campeão!!!!  (' + user_key + ')')
                             process.exit()
                         })
+                    } else {
+                        next_score()
                     }
                 })
+            } else {
+                next_score()
             }
         })
     })
@@ -53,7 +57,6 @@ function next_score() {
             for (i = 1; i <= 50; i++) {
                 key = 'user:' + i
                 check_user_score(card_num, key)
-                next_score()
             }
         }
     })
